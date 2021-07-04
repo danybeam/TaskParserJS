@@ -2,10 +2,12 @@
   "name": "task-parser",
   "version": "0.0.0",
   "description": "Implementation of Task Spec parser(https://github.com/danybeam/ToDo-spec) for JS",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:antlr": "npx shx rm -rf ./src/antlr4/.antlr  ./src/antlr4/*.js ./src/antlr4/*.tokens ./src/antlr4/*.interp"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/danybeam/TaskParserJS/issues"
   },
-  "homepage": "https://github.com/danybeam/TaskParserJS#readme"
+  "homepage": "https://github.com/danybeam/TaskParserJS#readme",
+  "dependencies": {
+    "antlr4": "^4.9.2"
+  },
+  "devDependencies": {}
 }
