@@ -1,0 +1,11 @@
+T__0=1
+T__1=2
+NL=3
+CONTENT=4
+START=5
+DASH=6
+CHECKBOX=7
+MARKEDBOX=8
+' '=1
+'\t'=2
+'-'=6

@@ -1,0 +1,5 @@
+- implement full grammar
+- implement custom visitor
+    [x] figure out how to distinguish children in tree
+    [x] create building block types
+    - switch for constructors in visitor

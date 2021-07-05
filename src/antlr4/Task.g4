@@ -1,11 +1,11 @@
 grammar Task;
 
-foo
-    : (element|emptyLine)* EOF
+elements
+    : (task|emptyLine)* EOF
     ;
 
-element
-    : '*' ( ' ' | '\t' )* CONTENT NL+
+task
+    : START ( ' ' | '\t' )* CONTENT NL*
     ;
 
 emptyLine
@@ -18,4 +18,23 @@ NL
 
 CONTENT
     : [a-zA-Z0-9_][a-zA-Z0-9_ \t]*
+    ;
+
+START
+    : DASH
+    | CHECKBOX
+    | MARKEDBOX
+    ;
+
+DASH
+    : '-';
+
+CHECKBOX
+    : '[]'
+    | '[ ]'
+    ;
+    
+MARKEDBOX
+    : '[x]'
+    | '[X]'
     ;
